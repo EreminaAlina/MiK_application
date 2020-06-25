@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+              android:orientation="vertical">
+        <Button
+                android:text="Открыть режим компилятора"
+                android:id="@+id/MainActivityStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            style = "@style/ButtonTheme"/>
+        <Button
+            android:text="Инструкция"
+            android:id="@+id/MainActivityInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style = "@style/ButtonTheme"/>
+</LinearLayout>

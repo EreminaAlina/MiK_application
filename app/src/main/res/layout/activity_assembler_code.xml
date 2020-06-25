@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CodeActivity">
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:visibility="visible"
+                      >
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:visibility="visible"
+                          android:id="@+id/AssemblerCodeMainLinLayout">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:id="@+id/AssemblerCodeSecondLinear"
+                >
+
+                    <Button
+                        android:id="@+id/AssemblerCodeBtnStart"
+                        style="@style/ButtonTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Старт" />
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeBtnDebug"
+                            style = "@style/ButtonTheme"
+                            android:text="Debug"/>
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeBtnClearCode"
+                            style = "@style/ButtonTheme"
+                            android:text="Очистить"/>
+                    <Button android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeBtnClearLogs"
+                            style = "@style/ButtonTheme"
+                            android:text="Очистить логи"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal">
+                        <Button android:layout_width="133dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/AssemblerCodeBtnShowLogMain"
+                                style = "@style/ButtonTheme"
+                                android:text="Показать логи"/>
+                        <Button android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/AssemblerCodeBtnShowRegisters"
+                                style = "@style/ButtonTheme"
+                                android:text="Показать регистры"/>
+                        <Button android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/AssemblerCodeBtnAsmMik"
+                                style = "@style/ButtonTheme"
+                                android:text="ASM MIK"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="50dp"
+                              android:orientation="horizontal"
+                >
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/AssemblerCodeBtnEnterCode"
+                            style = "@style/ButtonTheme"
+                            android:text="Ввести :"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="20dp"
+                              style = "@style/Text"
+                              android:text="А ОП: "
+                              android:textAlignment="center"
+                              android:layout_gravity="center_vertical"
+                    />
+                    <EditText android:layout_width="100dp"
+                              android:id="@+id/AssemblerCodeCommandAddress"
+                              android:textSize="20dp"
+                              android:layout_gravity="right"
+                              android:inputType="phone"
+                              style = "@style/AddrTheme"
+                              android:text="0"
+                              android:layout_height="match_parent"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="20dp"
+                              style = "@style/Text"
+                              android:text="К ОП: "
+                              android:textAlignment="center"
+                              android:layout_gravity="center_vertical"/>
+                    <EditText android:layout_width="100dp"
+                              android:id="@+id/AssemblerCodeCommandCode"
+                              android:textSize="20dp"
+                              android:text="0"
+                              android:layout_gravity="right"
+                              android:inputType="phone"
+                              style = "@style/AddrTheme"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="50dp"
+                              android:orientation="horizontal"
+                >
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/AssemblerCodeBtnEnterData"
+                            style = "@style/ButtonTheme"
+                            android:text="Ввести :"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="20dp"
+                              style = "@style/Text"
+                              android:text="А: "
+                              android:textAlignment="center"
+                              android:layout_gravity="center_vertical"
+                    />
+                    <EditText android:layout_width="100dp"
+                              android:id="@+id/AssemblerCodeDataAddressFirst"
+                              android:textSize="20dp"
+                              android:text="0"
+                              android:layout_gravity="right"
+                              android:inputType="phone"
+                              style = "@style/AddrTheme"
+                        android:layout_height="match_parent"/>
+                    <EditText android:layout_width="100dp"
+                              android:id="@+id/AssemblerCodeDataAddressSecond"
+                              android:textSize="20dp"
+                              android:text="0"
+                              android:layout_gravity="right"
+                              android:inputType="phone"
+                              style = "@style/AddrTheme"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="80dp"
+                              android:textSize="20dp"
+                              android:text="Адрес"
+                              android:textAlignment="center"
+                              style = "@style/Text"
+                              android:layout_gravity="center_vertical"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="100dp"
+                              android:text="ОП"
+                              android:textAlignment="center"
+                              android:textSize="20dp"
+                              style = "@style/Text"
+                              android:layout_gravity="right"
+                              android:layout_height="match_parent"/>
+                    <TextView android:layout_width="match_parent"
+                              android:text="Комментарий"
+                              android:id="@+id/BeautifulComment"
+                              android:textAlignment="center"
+                              android:textSize="20dp"
+                              style = "@style/Text"
+                              android:layout_gravity="right"
+                              android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:id="@+id/AssemblerCodeCopyLinearLayout"
+            >
+                <EditText android:layout_width="80dp"
+                          android:id="@+id/AssemblerCodeCopyAddr"
+                          android:gravity="center"
+                          android:textSize="20dp"
+                          android:textAlignment="center"
+                          android:layout_gravity="center_vertical"
+                          android:inputType="text"
+                          style = "@style/Text"
+                    android:layout_height="wrap_content"/>
+                <EditText android:layout_width="100dp"
+                          android:id="@+id/AssemblerCodeCopyCommand"
+                          android:gravity="center"
+                          android:textSize="20dp"
+                          android:textAlignment="center"
+                          android:layout_gravity="center_vertical"
+                          android:inputType="text"
+                          style = "@style/AddrTheme"
+                    android:layout_height="wrap_content"/>
+                <EditText android:layout_width="match_parent"
+                          android:id="@+id/AssemblerCodeCopyComment"
+                          android:textSize="20dp"
+                          android:layout_gravity="right"
+                          android:inputType="text"
+                          style = "@style/Text"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="gone"
+                          android:orientation="vertical"
+                          android:id="@+id/AssemblerCodeAsmLayout">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                >
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeAsmCompile"
+                            style = "@style/ButtonTheme"
+                            android:text="Компилировать"/>
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeAsmBack"
+                            style = "@style/ButtonTheme"
+                            android:text="Вернуться"/>
+
+                    <Button
+                        android:id="@+id/AssemblerCodeAsmShowMacros"
+                        style="@style/ButtonTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Список макросов" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                >
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeAsmClear"
+                            style = "@style/ButtonTheme"
+                            android:text="Очистить"/>
+                    <Button android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/AssemblerCodeAsmShowLogs"
+                            style = "@style/ButtonTheme"
+                            android:text="Показать логи"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="100dp"
+                              android:textSize="20dp"
+                              android:text="Метка"
+                              android:textAlignment="center"
+                              android:layout_gravity="center_vertical"
+                              style = "@style/Text"
+                              android:layout_height="wrap_content"/>
+                    <TextView android:layout_width="100dp"
+                              android:text="ОП"
+                              android:textAlignment="center"
+                              android:textSize="20dp"
+                              android:layout_gravity="right"
+                              style = "@style/Text"
+                              android:layout_height="match_parent"/>
+                    <TextView android:layout_width="match_parent"
+                              android:text="Комментарий"
+                              android:textAlignment="center"
+                              android:textSize="20dp"
+                              style = "@style/Text"
+                              android:layout_gravity="right"
+                              android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                >
+                    <EditText android:layout_width="100dp"
+                              android:gravity="center"
+                              android:textSize="20dp"
+                              android:textAlignment="center"
+                              android:layout_gravity="center_vertical"
+                              android:inputType="text"
+                              style = "@style/Text"
+                              android:layout_height="match_parent"/>
+                    <EditText android:layout_width="100dp"
+                              android:textSize="20dp"
+                              android:layout_gravity="right"
+                              style = "@style/Text"
+                              android:inputType="text"
+                              android:layout_height="match_parent"/>
+                    <EditText android:layout_width="match_parent"
+                              android:textSize="20dp"
+                              android:layout_gravity="right"
+                              style = "@style/Text"
+                              android:inputType="text"
+                              android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="ButtonTheme" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/insent</item>
+        <item name ="android:textColor">#212121</item>
+        <item name ="android:fontFamily" tools:targetApi="jelly_bean">@font/newstyle</item>
+        <item name ="android:textSize">6pt</item>
+    </style>
+    <style name ="AddrTheme" parent ="@style/Widget.AppCompat.TextView.SpinnerItem">
+        <item name ="android:fontFamily" tools:targetApi="jelly_bean">@font/numbers</item>
+    </style>
+    <style name="dialogAlertTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:buttonBarButtonStyle">@style/ButtonTheme</item>
+    </style>
+    <style name="Text" parent = "@style/Widget.AppCompat.TextView.SpinnerItem">
+        <item name ="android:fontFamily" tools:targetApi ="jelly_bean">@font/edittext</item>
+    </style>
+</resources>
